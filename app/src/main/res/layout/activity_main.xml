@@ -1,0 +1,44 @@
+<!--
+    Programmer: Jonathan Trapane
+    Class ID: jtrapa4027
+    Lab #2: Pick-O-Matic
+    CIS 4700: Mobile Commerce Development
+    Spring 2015
+    Due date: 02/22/15
+    Date completed: 02/22/15
+    *************************************
+    * Program Explanation
+    * Lab2 is a movie quiz. The user is prompted
+    * to enter his or her username to keep high scores.
+    * Three genres of movies are possible via menu. The
+    * user is presented with several choices and must
+    * choose the director of the movie shown. User then
+    * has the ability to find more info about the correct
+    * director if he or she wishes.
+    *************************************
+-->
+
+    <!-- Relative layout for main activity. Width and height match parent.
+    Padding set to 16dp on all sides. Linked to MainActivity java. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Fragment for quiz. Linked to QuizFragment java and
+    fragment_quiz layout. Height and width match parent. -->
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="edu.wmich.lab2jtrapa4027.QuizFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_quiz" />
+
+</RelativeLayout>

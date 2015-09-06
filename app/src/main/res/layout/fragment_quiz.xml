@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--
+    Programmer: Jonathan Trapane
+    Class ID: jtrapa4027
+    Lab #2: Pick-O-Matic
+    CIS 4700: Mobile Commerce Development
+    Spring 2015
+    Due date: 02/22/15
+    Date completed: 02/22/15
+    *************************************
+    * Program Explanation
+    * Lab2 is a movie quiz. The user is prompted
+    * to enter his or her username to keep high scores.
+    * Three genres of movies are possible via menu. The
+    * user is presented with several choices and must
+    * choose the director of the movie shown. User then
+    * has the ability to find more info about the correct
+    * director if he or she wishes.
+    *************************************
+    -->
+
+    <!-- Esstablishes linear layout for fragmentquiz -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Textview to display question number. Width and height
+    wrap content. Gravity is horizontally centered. Text pulls
+    numbers from string variables to display question number.
+    Text appearance is medium. -->
+
+    <TextView
+        android:id="@+id/questionNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="Question %1$d of %2$d"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <!-- Imageview for poster images. Width wraps content
+    and height adjust to scaletype. Gravity is centered with
+    top and bottom margins of 8dp and left and right margins
+    of 16dp. Weight is 1 and viewbounds are adjusted. Description
+    is "image of current poster in the quiz". Scales to fit center, -->
+
+    <ImageView
+        android:id="@+id/posterImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="Image of current poster in the quiz"
+        android:scaleType="fitCenter" />
+
+
+    <!-- Textview to display "Guess the Film". Height and width wrap
+    content. Horizontally centered with a bottom margin of 8dp. Text
+    appearance is medium. -->
+
+    <TextView
+        android:id="@+id/guessFilmTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:text="Guess the Director"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <!-- Nested linear layout
+     Id is "row1LinearLayout". Width matches parent
+     and height wraps content. 8dp bottom margin and
+     horizontally oriented.-->
+
+    <LinearLayout
+        android:id="@+id/row1LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <!-- 1st row buttons. Small style. Set
+         to fill based on text with weight of 1.-->
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+     </LinearLayout>
+
+    <!-- Nested linear layout
+     Id is "row2LinearLayout". Width matches parent
+     and height wraps content. 8dp bottom margin and
+     horizontally oriented. Default visibility
+     is invisible.-->
+
+    <LinearLayout
+        android:id="@+id/row2LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <!-- 2nd row buttons. Small style. Set
+         to fill based on text with weight of 1.-->
+
+        <Button
+            android:id="@+id/button4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button5"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button6"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- Nested linear layout
+     Id is "row3LinearLayout". Width matches parent
+     and height wraps content. 8dp bottom margin and
+     horizontally oriented. Default visibility
+     is invisible.-->
+
+    <LinearLayout
+        android:id="@+id/row3LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <!-- 2nd row buttons. Small style. Set
+         to fill based on text with weight of 1.-->
+
+        <Button
+            android:id="@+id/button7"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button8"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button9"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- Textview to display answer. Width and height
+    wrap content. Layout gravity set to center bottom.
+    Gravity is horizontally centered. Text size set to 40sp
+    and is bold. -->
+
+    <TextView
+        android:id="@+id/answerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:gravity="center_horizontal"
+        android:textSize="40sp"
+        />
+
+</LinearLayout>

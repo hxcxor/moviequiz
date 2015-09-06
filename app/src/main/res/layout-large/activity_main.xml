@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #2: Pick-O-Matic
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 02/22/15
+Date completed: 02/22/15
+*************************************
+* Program Explanation
+* Lab2 is a movie quiz. The user is prompted
+* to enter his or her username to keep high scores.
+* Three genres of movies are possible via menu. The
+* user is presented with several choices and must
+* choose the director of the movie shown. User then
+* has the ability to find more info about the correct
+* director if he or she wishes.
+*************************************
+-->
+
+    <!-- Establishes linear layout for large-land mainactivity. Height
+    and width match parent. Baseline is not aligned. Horizontally oriented
+    with 16dp margins. Weightsum is set to 3 - total layout weight
+    amongst fragments. Linked to MainActivity. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:weightSum="3"
+    tools:context=".MainActivity" >
+
+    <!-- Settings Fragment. Linked to settingsfragment file. Width
+    is 0dp and height matches parent. Weight is one. Layout is
+    android's layout/preferences. -->
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="edu.wmich.lab2jtrapa4027.SettingsFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout="@android:layout/preference_category" />
+
+    <!-- Quiz fragment. Linked to QuizFragment file. Width is 0dp and
+    height matches parent. Weight is 2. Layout is fragment quiz. -->
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="edu.wmich.lab2jtrapa4027.QuizFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        tools:layout="@layout/fragment_quiz" />
+
+</LinearLayout>

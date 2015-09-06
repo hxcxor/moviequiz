@@ -1,0 +1,32 @@
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #2: Pick-O-Matic
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 02/22/15
+Date completed: 02/22/15
+*************************************
+* Program Explanation
+* Lab2 is a movie quiz. The user is prompted
+* to enter his or her username to keep high scores.
+* Three genres of movies are possible via menu. The
+* user is presented with several choices and must
+* choose the director of the movie shown. User then
+* has the ability to find more info about the correct
+* director if he or she wishes.
+*************************************
+-->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Provides spacing between GUI components. -->
+    <dimen name="spacing">8dp</dimen>
+    <!-- Font size for the answer textview -->
+    <dimen name="answer_size">40sp</dimen>
+
+</resources>

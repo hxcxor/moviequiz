@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Programmer: Jonathan Trapane
+Class ID: jtrapa4027
+Lab #2: Pick-O-Matic
+CIS 4700: Mobile Commerce Development
+Spring 2015
+Due date: 02/22/15
+Date completed: 02/22/15
+*************************************
+* Program Explanation
+* Lab2 is a movie quiz. The user is prompted
+* to enter his or her username to keep high scores.
+* Three genres of movies are possible via menu. The
+* user is presented with several choices and must
+* choose the director of the movie shown. User then
+* has the ability to find more info about the correct
+* director if he or she wishes.
+*************************************
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Presents user with preferences for number of guesses. Pulls
+    array "guesses_list" for number of choices. Key is stored as
+    "pref_numberOfChoices". True persistence indicates app will
+    continue running. Summary provides instructions and title
+    displays "Number Of Choices". Default value set to 3. -->
+
+    <ListPreference
+        android:entries="@array/guesses_list"
+        android:entryValues="@array/guesses_list"
+        android:key="pref_numberOfChoices"
+        android:persistent="true"
+        android:summary="Display 3, 6 or 9 guess buttons"
+        android:title="Number of Choices"
+        android:defaultValue="3"/>
+
+    <!-- Stores a set of strings into prefs. Pulls array
+    "genres_list_for_settings" for entries and values in
+    list are "genres_list" array. Keys stored as
+    "pref_genresToInclude". App continues to run. Summary
+    and title display genre information. Default Value
+    displays genres_list array. -->
+
+    <MultiSelectListPreference
+        android:entries="@array/genres_list_for_settings"
+        android:entryValues="@array/genres_list"
+        android:key="pref_genresToInclude"
+        android:persistent="true"
+        android:summary="Genres to include in the quiz"
+        android:title="Genres"
+        android:defaultValue="@array/genres_list"/>
+
+</PreferenceScreen>
